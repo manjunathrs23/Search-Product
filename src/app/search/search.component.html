@@ -1,0 +1,16 @@
+<section>
+   <h5> Product search </h5>
+  <input name="searchInput" [(ngModel)]="searchInput" type="text"  placeholder="Enter search text" size="25" ><button (click)="search()" >Submit</button><br><br>
+      <article>
+         <h4> Results </h4>
+         
+          <ul *ngFor="let product of searchProducts">
+            <li>
+               Product Name :  {{product.name}}<br>
+               Product category:  {{product.category}} <br>
+               Product Price: {{product.price}} <br><br>
+            </li>
+          </ul>
+        
+      </article>
+  </section>
